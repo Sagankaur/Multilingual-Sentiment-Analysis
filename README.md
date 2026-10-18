@@ -36,6 +36,24 @@ flowchart LR
     Generate --> Submission[submission.csv]
 ```
 
+## Kaggle results
+
+Figures below come from the Kaggle API (account `sagandeep`, queried 2026-10-18) for the [NPPE DLP 2026 Term 1](https://www.kaggle.com/competitions/nppe-dlp-2026-term-1) competition.
+
+- **Leaderboard rank: 41 of 209 teams** (public leaderboard; the API does not expose a private-leaderboard ranking).
+- **Best public score: 0.97560**; the same submission scored **0.96551** on the private split. Higher is better (the leaderboard is ordered descending, with the top teams at 1.0). The score is macro F1 as used in the notebook; the competition's own metric page was not retrievable through the API.
+- 13 scored submissions in total; public and private scores differ by a few points, as expected for a small test set.
+
+![Results chart generated from the Kaggle API](docs/screenshots/kaggle-results.png)
+
+*Results chart generated from the Kaggle API (not a screenshot): scored submissions over time.*
+
+Stored output from the committed notebook (exploratory data analysis: class balance, samples per language, word counts):
+
+![Notebook EDA output](docs/screenshots/kaggle-notebook-eda.png)
+
+The Kaggle notebooks `dlp-nppe-1` and `dlp-nppe-1.1` are private and store no figures; the image above is the stored output of [`23f2003511.ipynb`](23f2003511.ipynb).
+
 ## Recorded notebook result
 
 The executed notebook prints a **local macro F1 of 0.9778** on 90 validation examples, with 900 original labelled examples in total.
